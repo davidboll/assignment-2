@@ -2,7 +2,6 @@
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -18,48 +17,52 @@ html {
   background-color: #000;
   display: flex;
   height: 100%;
+  flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 30px;
+  padding: 15px;
 }
 
 h3 {
   color: #fff;
-  font-size: 2rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5;
   margin: 0;
+  text-align: center;
 }
 
 p {
   color: #fff;
-  font-size: 1.5rem;
-  line-height: 1.5;
   font-family: fantasy;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .tip {
   color: #fb0202;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
 .container {
   align-items: center;
+  animation: fadeIn 2s ease-in;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 600px;
   text-align: center;
-  animation: fadeIn 2s ease-in;
+  width: 100%;
 }
 
 .skynetImage {
   height: auto;
-  max-width: 600px;
   margin-bottom: 20px;
   opacity: 100;
+  width: 100%;
 }
 
 #playGame {
@@ -68,11 +71,45 @@ p {
   border-radius: 8px;
   color: #fff;
   cursor: pointer;
+  display: block;
   margin: 4px 2px;
-  padding: 15px 32px;
+  padding: 12px 24px;
   text-align: center;
+  width: 100%;
 }
 
 #playGame:hover {
   background-color: #7f3b83;
+}
+
+@media (min-width: 600px) {
+  body,
+  html {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .tip {
+    font-size: 1.2rem;
+  }
+
+  #playGame {
+    padding: 15px 32px;
+  }
+
+  .container {
+    width: auto;
+  }
+
+  .skynetImage {
+    max-width: 600px;
+  }
 }
